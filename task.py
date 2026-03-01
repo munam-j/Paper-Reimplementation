@@ -1,13 +1,3 @@
-# IMPORTANT: RUN THIS CELL IN ORDER TO IMPORT YOUR KAGGLE DATA SOURCES,
-# THEN FEEL FREE TO DELETE THIS CELL.
-# NOTE: THIS NOTEBOOK ENVIRONMENT DIFFERS FROM KAGGLE'S PYTHON
-# ENVIRONMENT SO THERE MAY BE MISSING LIBRARIES USED BY YOUR
-# NOTEBOOK.
-import kagglehub
-mathurinache_cmu_mosi_path = kagglehub.dataset_download('mathurinache/cmu-mosi')
-
-print('Data source import complete.')
-
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
