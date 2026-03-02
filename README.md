@@ -21,3 +21,8 @@ This repository implements the research paper **"Can We Exploit All Datasets? Mu
 This implementation uses the **CMU-MOSI** dataset. 
 <img width="299" height="299" alt="image" src="https://github.com/user-attachments/assets/c45270a3-8b90-4ae7-844d-36b30f75927a" />
 
+## Output
+<img width="299" height="299" alt="Screenshot 2026-02-28 233851" src="https://github.com/user-attachments/assets/9ce24ec4-1c4d-4c48-aed8-f5bf83cfcfb9" />
+<img width="299" height="299" alt="Screenshot 2026-02-28 233904" src="https://github.com/user-attachments/assets/71ad14b5-6b5a-497c-a07d-d88f753d6410" />
+
+
