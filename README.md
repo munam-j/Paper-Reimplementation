@@ -18,9 +18,9 @@ All datasets share the unified 6-class MOSEI emotion space: happy=0  sad=1  ange
 
 ## Training Curriculum
 Training follows Algorithm 1 from the paper with a warmup addition:
-# Phase 1 — Warmup (epochs 1–3): 
+## Phase 1 — Warmup (epochs 1–3): 
 Classifier-only training. Missing modalities are zero-padded rather than translated (random-initialised translators produce noisier features than zeros). This gives the classifier a stable prior before the GAN losses are introduced.
-# Phase 2 — E2E co-training (epochs 4–10): 
+## Phase 2 — E2E co-training (epochs 4–10): 
 Every 7th step fires the full Algorithm 1:
 1. For each of the 6 directed translator pairs, compute KL + reconstruction + GAN + SeqDis + cycle losses and synthesise fake features.
 2. Build modality pools: pool_a = [real_a, fake_va, fake_ta], similarly for v and t (3 entries each).
