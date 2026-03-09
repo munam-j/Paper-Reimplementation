@@ -1,24 +1,26 @@
-# In a Kaggle cell
-!pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
-!pip install numpy pandas opencv-python librosa scikit-learn matplotlib seaborn tqdm pyyaml
-
-Or
-# In a Kaggle cell - write requirements file
-with open('requirements.txt', 'w') as f:
-    f.write('''
+# Core deep learning
 torch>=2.0.0
 torchvision>=0.15.0
-torchaudio>=2.0.0
-numpy>=1.21.0
-pandas>=1.3.0
-opencv-python>=4.5.0
-librosa>=0.9.0
-scikit-learn>=1.0.0
-matplotlib>=3.4.0
-seaborn>=0.11.0
-tqdm>=4.62.0
-pyyaml>=5.4.0
-'''.strip())
 
-# Install
-!pip install -r requirements.txt
+# Visual feature extraction
+opencv-python>=4.7.0
+facenet-pytorch>=2.5.3        # InceptionResnetV1 (VGGFace2) + MTCNN face detector
+
+# Audio feature extraction
+librosa>=0.10.0               # audio resampling / mel spectrogram
+
+# Text embeddings — GloVe downloaded at runtime (~862 MB)
+# no pip package required; urllib used directly
+
+# Training utilities
+numpy>=1.24.0
+scikit-learn>=1.2.0
+tqdm>=4.65.0
+
+# Plotting
+matplotlib>=3.7.0
+seaborn>=0.12.0               # optional — confusion matrix heatmap
+
+# NOTE: torchtext must NOT be installed alongside this package.
+# It causes an ABI conflict (libtorchtext.so undefined symbol) on Kaggle.
+# GloVe embeddings are loaded directly via urllib instead.
