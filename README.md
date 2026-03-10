@@ -10,7 +10,8 @@ Paper reports 52.7% WA on CMU-MOSEI. The ~20pp gap is almost entirely due to dat
 ## Dataset
 This implementation uses the **CMU-MOSI** dataset. 
 
-<img width="650" height="475" alt="image" src="https://github.com/user-attachments/assets/f4434f53-c189-4c27-b430-e728c6dedcc4" />
+<img width="650" height="475" alt="Screenshot 2026-03-09 134650" src="https://github.com/user-attachments/assets/99425ac0-926a-47a6-8b6c-749087dc54fd" />
+
 
 The paper uses CMU-MOSEI (not available on Kaggle) as the primary dataset. CMU-MOSI is used as a substitute, mapping sentiment scores to happy (score > 1.0) and sad (score < −1.0). This is the largest single source of the accuracy gap.
 
