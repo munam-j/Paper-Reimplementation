@@ -3,14 +3,14 @@
 Trains a trimodal (visual + audio + text) emotion classifier by simultaneously learning six cross-modal VAEGAN translators — one per directed pair among the three modalities — so that unimodal and bimodal auxiliary datasets can also contribute to the trimodal model.
 
 ## Results
-<img width="650" height="475" alt="image" src="https://github.com/user-attachments/assets/3adbe3c0-1e90-448b-a6b5-e78006da883e" />
+<img width="475" height="475" alt="image" src="https://github.com/user-attachments/assets/3adbe3c0-1e90-448b-a6b5-e78006da883e" />
 
 Paper reports 52.7% WA on CMU-MOSEI. The ~20pp gap is almost entirely due to dataset constraints (MOSEI unavailable on Kaggle → MOSI proxy used; AFEW and IEMOCAP absent) and the backbone substitution (FAN → VGGFace2). 
 
 ## Dataset
 This implementation uses the **CMU-MOSI** dataset. 
 
-<img width="375" height="300" alt="Screenshot 2026-03-09 134650" src="https://github.com/user-attachments/assets/99425ac0-926a-47a6-8b6c-749087dc54fd" />
+<img width="300" height="300" alt="Screenshot 2026-03-09 134650" src="https://github.com/user-attachments/assets/99425ac0-926a-47a6-8b6c-749087dc54fd" />
 
 
 The paper uses CMU-MOSEI (not available on Kaggle) as the primary dataset. CMU-MOSI is used as a substitute, mapping sentiment scores to happy (score > 1.0) and sad (score < −1.0). This is the largest single source of the accuracy gap.
@@ -32,8 +32,8 @@ Between E2E steps, the classifier runs with translated augmentation (use_transla
 
 ## Outputs
 After training, three files are written to /kaggle/working/:
-<img width="650" height="422" alt="image" src="https://github.com/user-attachments/assets/8219fac0-8a7c-4927-94dd-e9d690645e6c" />
-<img width="650" height="600" alt="training_curves (1)" src="https://github.com/user-attachments/assets/b1e763d3-ff0c-4e69-859f-aaf6d0802b37" />
+<img width="422" height="422" alt="image" src="https://github.com/user-attachments/assets/8219fac0-8a7c-4927-94dd-e9d690645e6c" />
+<img width="600" height="600" alt="training_curves (1)" src="https://github.com/user-attachments/assets/b1e763d3-ff0c-4e69-859f-aaf6d0802b37" />
 <img width="650" height="1050" alt="confusion_matrix_test (1)" src="https://github.com/user-attachments/assets/eddfa848-f64b-4f2b-84b5-6ceda70c6dd6" />
 
 ## Known Deviations from the Paper
